@@ -1,0 +1,41 @@
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cell {
+    height: 30px;
+    width: 30px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  /* Grid Properties*/
+  #grid {
+    display: flex;
+  }
+
+  .columns {
+    display: flex;
+  }
+  /* Node Styles */
+  #startNode:hover {
+    cursor: grab;
+  }
+  
+  #endNode:hover {
+    cursor: grab;
+  }
+  
+  .pathNode {
+    background-color: rgb(255, 174, 0);
+  }
+  
+  .obstacle{
+    background-color: rgb(88, 88, 88);
+  }
