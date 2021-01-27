@@ -1,10 +1,27 @@
+  /* Web Page Properties */
+  nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
+  
   body {
-    box-sizing: border-box;
-    margin: 0;
+    min-width: 100vw;
     min-height: 100vh;
+  }
+
+  main {
+    min-width: 100vw;
+    margin-top: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
   }
   .cell {
     height: 30px;
@@ -38,4 +55,21 @@
   
   .obstacle{
     background-color: rgb(88, 88, 88);
+  }
+
+  @media only screen and (max-width: 992px){
+
+    main{
+      flex-direction: column;
+    }
+
+    .cell {
+      height: 15px;
+      width: 15px;
+    }
+
+    footer{
+      position: initial;
+      margin-top: 1em;
+    }
   }
