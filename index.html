@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PathFinder Visualizer</title>
-    <!-- Bootstrap Css -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon/rocketIconLetterV.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PathFinder Visualizer</title>
+  <!-- Bootstrap Css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon/rocketIconLetterV.png" type="image/x-icon">
 </head>
+
 <body>
 
-    <div>
-        <div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">PathFinder Visualizer</span>
+    </div>
+  </nav>
+
+  <section>
+    <div class="modalBg" id="modalBg">
+      <div class="customModal">
+        <div class="customModalHeader">
+          <h2 class="text-success">Welcome</h2>
+        </div>
+        <div class="customModalBody">
+          <p>In this PathFinder Visualizer, you will be able to see the shortest path between two Nodes. Just grab the Start and the End Node on your left and put them whenever you want on the available spots. Then click visualize and see the path before your eyes.</p>
+        </div>
+        <div class="customModalFooter">
+          <button class="btn btn-success" id="customModalBtn">Let's go</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <div class="d-flex flex-column me-3">
+
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="m-2 text-center" style="width: 100px; height: 66px;">
+          <h5>Start Node</h5>
           <i class="fas fa-dot-circle fa-2x node" id="startNode" draggable="true"></i>
+        </div>
+        <div class="m-2 text-center" style="width: 100px; height: 66px;">
+          <h5>End Node</h5>
           <i class="fas fa-stop-circle fa-2x node" id="endNode" draggable="true"></i>
         </div>
-        <button onclick="aStar()">Visualize</button>
-        <button onclick="reset()">Reset</button>
+      </div>
+
+      <button class="btn btn-success m-2" onclick="aStar()">Visualize</button>
+      <button class="btn btn-danger m-2" onclick="reset()">Reset</button>
+
     </div>
 
     <div id="grid">
       <div id="columns" class="columns"></div>
     </div>
 
-    <script  src="./js/main.js"></script>
+  </main>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script> -->
+  <footer class="bg-dark text-lg-start p-5">
+    <div class="text-light text-center">
+      © 2021 Copyright: Made with ❤ by Julián Valero
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

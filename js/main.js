@@ -122,7 +122,7 @@ const gridGenerator = (rows, cols) => {
 
 let gridColumns = document.getElementById("columns")
 const columns = 20;
-const rows = 10;
+const rows = 12;
 
 gridGenerator(rows, columns)
 
