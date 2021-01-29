@@ -25,10 +25,26 @@
     </div>
   </nav>
 
+  <section>
+    <div class="modalBg" id="modalBg">
+      <div class="customModal">
+        <div class="customModalHeader">
+          <h2 class="text-success">Welcome</h2>
+        </div>
+        <div class="customModalBody">
+          <p>In this PathFinder Visualizer, you will be able to see the shortest path between two Nodes. Just grab the Start and the End Node on your left and put them whenever you want on the available spots. Then click visualize and see the path before your eyes.</p>
+        </div>
+        <div class="customModalFooter">
+          <button class="btn btn-success" id="customModalBtn">Let's go</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
 
-    <div class="d-flex flex-column m-3">
-  
+    <div class="d-flex flex-column me-3">
+
       <div class="d-flex flex-column justify-content-center align-items-center">
         <div class="m-2 text-center" style="width: 100px; height: 66px;">
           <h5>Start Node</h5>
@@ -39,12 +55,12 @@
           <i class="fas fa-stop-circle fa-2x node" id="endNode" draggable="true"></i>
         </div>
       </div>
-  
+
       <button class="btn btn-success m-2" onclick="aStar()">Visualize</button>
       <button class="btn btn-danger m-2" onclick="reset()">Reset</button>
-  
+
     </div>
-  
+
     <div id="grid">
       <div id="columns" class="columns"></div>
     </div>
@@ -58,6 +74,7 @@
   </footer>
 
   <script src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
     integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
